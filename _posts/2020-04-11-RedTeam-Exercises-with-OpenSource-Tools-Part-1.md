@@ -86,7 +86,7 @@ This looks bad until now but courage, there is hope :).
 
 
 ## How do I make use of open source? {#howdoimakeuseofopensource}
-As a penetration tester, I have to prioriteze what I want to complete first for having a prepared arsenal for any penetration test. Because time is precious to every one of us, we have to move fast: 
+As a penetration tester, I have to prioritize what I want to complete first for having a prepared arsenal for any penetration test. Because time is precious to every one of us, we have to move fast: 
 <ol>
 <li>Get a working base code first from Empire, Metasploit, etc., would be ideally instead of reinventing the whell (reinventing the whell is a good thing if you are a malware developer - but this is a story for other article :) ).</li>
 <li>Customize functions - change default parameters/functions names, delete comments, write the functionality in other way, etc.</li>  
