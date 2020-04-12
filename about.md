@@ -1,14 +1,17 @@
 ---
 layout: page
-title: About
+title: WhoAmI
 permalink: /about
 ---
 
-Some information about you!
+Who am I? My name is Bondrila Gabriel (also known to some as WHmacmac).
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+- certified OSCP 2019
+<a href="https://www.hackthebox.eu/profile/91248" target="_blank" rel="noopener noreferrer">HackTheBox CTF player </a>
+
+(Under Construction)
 
 ### Contact me
 
