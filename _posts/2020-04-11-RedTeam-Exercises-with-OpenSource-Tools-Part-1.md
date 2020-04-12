@@ -197,8 +197,30 @@ AST at base can easily find language elements. It is breaking the structure of t
 The AST obfuscation method will change the structure of AST.
 
 <br/><b>3.Encoding Obfuscation</b><br/>
-It is used to mask the payload by converting the format in Hex, ASCI, Binary, AES encrypted, etc. Beware because Powershell interpreter has a limit of 8191 characters so carefull how much encoding you do. This works fine with the compressing method.
+It is used to mask the payload by converting the format in Hex, ASCI, Binary, AES encrypted, etc. Beware because Powershell interpreter has a limit of 8191 characters so carefull how much encoding you do. This will works fine with the compressing method in case you apply multiple encoding methods recursively.
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/encoding.png">
+ </center>
+</div>
+
+
+<br/><b>4.String Obfuscation</b><br/>
+Obfuscated Powershell code as a string.<br/>
+Breaks up the code with reversing techniques and concatenation.
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/string.png">
+ </center>
+</div>
+
+<br/><b>5.Compress Obfuscation</b><br/>
+
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/compress.png">
+ </center>
+</div>
+
+<br/>Compress obfuscation can be used in conjunction with Encoding to reduce the overall size of the payload.
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/compressrate.png">
  </center>
 </div>
