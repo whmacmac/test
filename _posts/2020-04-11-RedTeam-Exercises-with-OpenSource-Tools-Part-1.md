@@ -257,4 +257,17 @@ set ObfuscateCommand Token\String\1,1,2, Token\Variable\1, Token\Whitespace\1,1,
 {% endhighlight %}
 
 <br/><br/> In the next article, we will see how to apply all what we discussed to bypass Windows Defender, AMSI and get a reverse shell. We will approach few scenaries in what will follow.<br/>
-Please let me know your feedback about it :).
+Please let me know your feedback about it :).<br/><br/><br/>
+
+References:
+https://docs.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal
+https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus
+https://docs.microsoft.com/en-us/windows/win32/amsi/how-amsi-helps
+https://docs.microsoft.com/en-us/windows/win32/api/amsi/ne-amsi-amsi_result
+https://www.bc-security.org/post/the-empire-3-0-strikes-back
+https://github.com/BC-SECURITY/Empire
+https://docs.microsoft.com/en-us/windows/win32/api/amsi/
+https://threatvector.cylance.com/en_us/home/how-to-implement-anti-malware-scanning-interface-provider.html
+https://www.bc-security.org/post/the-empire-3-0-strikes-back
+https://blog.rapid7.com/2018/05/03/hiding-metasploit-shellcode-to-evade-windows-defender/
+https://www.cyberark.com/threat-research-blog/amsi-bypass-patching-technique/
