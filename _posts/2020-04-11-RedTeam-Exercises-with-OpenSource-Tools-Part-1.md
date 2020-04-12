@@ -144,8 +144,7 @@ AMSI is still heavily dependent upon signatures, however simple concatenation ca
 <b>3.Variable Insertion</b><br/>
 Powershell recognizes $ as a special character in a string and will fetch the associated variable.
 <div>
-<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/insertion.png">
- </center>
+<img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/insertion.png">
 </div>
 
 <b>4.Format String</b><br/>
