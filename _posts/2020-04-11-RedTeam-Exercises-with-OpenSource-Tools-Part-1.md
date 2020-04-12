@@ -8,7 +8,7 @@ category: blog
 
 Can RedTeam exercises be done today only using open source tools and do they have 100% yield/success? Can I affirm that I can compete with the top solutions in a red team vs blue team engagement, blackbox or whitebox exercise, using only open source tools and having the same result as the enterprise solutions like: Canvas, Metasploit Pro, Open Core, Cobaltstrike ?
 
-In the series that I will approach, I will present ways to compete with the top security research undertaken by companies focused on security products and how we can combine and customize multiple open source sollutions for achieving the same result. 
+In the series that I will approach, I will present ways to compete with the top security research undertaken by companies focused on security products and how we can combine and customize multiple open source solutions for achieving the same result. 
 
 
 ## Contents
@@ -33,7 +33,7 @@ We can see a number of measures implemented in Microsoft's operating system that
   <li>Simulated Execution (SimExec)</li>
   <li>Valid stack integrity (StackPivot)</li>
 </ul>          
-I do not want to advertise Microsoft products but as I focus on proving we still can bypass their sollutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they already have not started). One security sollution from Microsoft I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why, I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what i am speaking of :).
+I do not want to advertise Microsoft products but as I focus on proving we still can bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they already have not started). One security sollution from Microsoft I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why, I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what i am speaking of :).
                     
 
 ## What is AMSI? {#whatisamsi}
