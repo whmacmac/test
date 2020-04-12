@@ -212,7 +212,7 @@ Breaks up the code with reversing techniques and concatenation.
  </center>
 </div>
 
-<br/><b>5.Compress Obfuscation</b><br/>
+<b>5.Compress Obfuscation</b><br/>
 
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/compress.png">
@@ -224,3 +224,37 @@ Breaks up the code with reversing techniques and concatenation.
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/compressrate.png">
  </center>
 </div>
+
+<br/><b>6.Obfuscate Command Args</b><br/>
+Many pentesters are underestimated the Launcher obfuscation in their malware development phases. In the below image we can what methods of launcher obfuscation are available for us. 
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/launcher.png">
+ </center>
+</div>
+As we can see many of them are including "somethingbla IEX". Microsoft learnt from the past and any input passed to the IEX command will be verified by the AMSI or Windows Defender. This can be problematic because it can ruin all of our obfuscation efforts. Below is a proof of AMSI detection of a malicious variable passed to IEX. I recommend using WMIC instead of IEX if it is possible. 
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/proof.png">
+ </center>
+</div>
+Empire already includes a launcher based on IEX. At this moment the community/I do not know a replacement for IEX. Maybe there is but Microsoft did not document all of these little tricks because they do not wanna let the APTs to take advantage of it.
+
+<br/><b>Conclusions</b><br/>
+1. Empire has integrated Invoke Obfuscation in its stager's console.<br/>
+Mix them up to avoid detection.<br/>
+Example: 
+<ol>
+<li>Token\String\1,2</li>
+<li>Whitespace\1</li>  
+<li>Encoding\1</li>  
+<li>Compress\1</li>  
+</ol>
+
+Example of how to use multiple obfuscation methods in Empire:
+{% highlight powershell %}
+set Obfuscate True
+set ObfuscateCommand Token\String\1,1,2, Token\Variable\1, Token\Whitespace\1,1, Compress\1
+
+{% endhighlight %}
+
+<br/><br/> In the next article, we will see how to apply all what we discussed to bypass Windows Defender, AMSI and get a reverse shell. We will approach few scenaries in what will follow.<br/>
+Please let me know your feedback about it :).
