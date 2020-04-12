@@ -212,7 +212,7 @@ Breaks up the code with reversing techniques and concatenation.
  </center>
 </div>
 
-<b>5. Compress Obfuscation</b><br/>
+<br/><b>5. Compress Obfuscation</b><br/>
 
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/compress.png">
