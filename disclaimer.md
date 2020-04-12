@@ -14,6 +14,6 @@ permalink: /disclaimer
 <p> I am providing these websites and backlinks to you only as a convenience, and the inclusion of any link does not imply endorsement by the author of this blog.</p>
 <p>There is no way to make offensive security related articles or to build offensive tools, useful to the legitimate infosec industry while simultaneously preventing malicious actors from abusing them. This blog is build in the interest of education and pushing forward particular ideas in the public industry. The author takes no responsibility for the abuse of any information on this site. DO NOT USE ANY INFORMATION FROM THIS BLOG TO BREAK THE LAW!</p>
 
-<p>Do not abuse my materials. Be responsible.</p>
+<p>Be responsible.</p>
 
 </body>
