@@ -256,7 +256,7 @@ set ObfuscateCommand Token\String\1,1,2, Token\Variable\1, Token\Whitespace\1,1,
 
 {% endhighlight %}
 
-<br/><br/> In the next article, we will see how to apply all what we discussed to bypass Windows Defender, AMSI and get a reverse shell. We will approach few scenaries in what will follow.<br/>
+<br/> In the next article, we will see how to apply all what we discussed to bypass Windows Defender, AMSI and get a reverse shell. We will approach few scenaries in what will follow.<br/>
 Please let me know your feedback about it :).<br/><br/><br/>
 
 References:<br/>
