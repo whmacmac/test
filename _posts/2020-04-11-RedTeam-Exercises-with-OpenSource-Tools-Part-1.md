@@ -210,7 +210,7 @@ It is used to mask the payload by converting the format in Hex, ASCI, Binary, AE
  </center>
 </div>
 
-Example of output:
+Example of output encrypt the entire command as SecureString (AES):
 {% highlight powershell %}
 & ((VaRIAble '*mdr*').nAmE[3,11,2]-JOIN'')( ([RUNTimE.intEropservIcEs.MARsHaL]::PTrtOStrInGAuTo([RUNtImE.iNteROPSERvIceS.mARShAL]::sEcuREsTRInGToBsTr( $('76492d1116743f0423413b16050a5345MgB8AEwAcgA2AHcAZgBZAGEAVgBrAEUAWQBmADYAUQBtAHMARABZAFoAbgBPAEEAPQA9AHwAOAAxADYAYQAxADgAZABlADEANAAwAGIAZQBkAGEAYwAwADkAMgAxAGYANQA0ADEAZABmADYAYgBmAGEAMgA3ADIAMQAxADIANgBiADIAYQBmAGIANwBmADkAZAA4ADgAYwAxADYAMwBkADEAYgAzADUAMwBkAGIANwAzADcANABhADAANgAxAGMANgAxADQAYQA0ADcANAAyAGUAMABlADcAMgA0ADkAYgAyAGQAYwBhADMAZgBhAGUAYQBhADUAYgA3ADcANAA2ADQAMABmADYANgAxADYAOQBlADkAMQAyAGIAMgBiADEAOAA1ADUANgBmAGIANQAxADEANgA0ADkAMQBkAGQAZQA3ADUAMAA1ADUAMgAxADEAZAAyADcAMgA3ADEAZgA2ADQAYwAxADkANAA1ADUAOQBkAGMAZQA5AGMANQBkADQAMwBkADUAZQA0AGUAYQA2ADkAMABlAGEAZAA1AGIAZABlAGMAOQBiADIAZQA4ADAANQA0ADEAMgA5ADcANwA4ADMAZABkAGYANAA4AGUAZAAxAGMAMwA4AGEAMwAyADUAYwAzADQAMQBlAGMAYgA2ADMAYQA5AA==' |CoNverttO-SecuRestRinG  -keY  (100..69)) ) ) )
 
@@ -224,6 +224,7 @@ Breaks up the code with reversing techniques and concatenation.
  </center>
 </div>
 
+Example of output concatenating the entire command:
 {% highlight powershell %}
 iNVOkE-EXPressION( (('Write-Host {'+'0'+'}'+'Inv'+'o'+'ke-O'+'bf'+'u'+'sca'+'tion{0}'+' -F'+'or'+'egroundC'+'o'+'lor '+'B'+'l'+'ue')-f  [ChAR]34) )
 
@@ -263,7 +264,7 @@ As we can see many of them are including "somethingbla IEX". Microsoft learnt fr
 </div>
 Empire already includes a launcher based on IEX. At this moment the community/I do not know a replacement for IEX. Maybe there is but Microsoft did not document all of these little tricks because they do not wanna let the APTs to take advantage of it.
 
-Example of output:
+Example of output using wmic as launcher:
 {% highlight powershell %}
 C:\wINdOws\sySTEm32\wBEm\WmIC prOcESS    "call"   'CREAte' "POwErShElL   Write-Host "\"Invoke-Obfuscation"\" -ForegroundColor Blue"
 
