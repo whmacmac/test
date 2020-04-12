@@ -239,7 +239,7 @@ As we can see many of them are including "somethingbla IEX". Microsoft learnt fr
 Empire already includes a launcher based on IEX. At this moment the community/I do not know a replacement for IEX. Maybe there is but Microsoft did not document all of these little tricks because they do not wanna let the APTs to take advantage of it.
 
 <br/><b>Conclusions</b><br/>
-1. Empire has integrated Invoke Obfuscation in its stager's console.<br/>
+Empire has integrated Invoke Obfuscation in its stager's console.<br/>
 Mix them up to avoid detection.<br/>
 Example: 
 <ol>
