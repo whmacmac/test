@@ -97,7 +97,7 @@ As a penetration tester, I have to prioriteze what I want to complete first for 
 So this being said, i have chosen to go on the BC SECURITY's solution, the reborn Empire (epic music should be played on at this phrase).
 
 <b>Why Empire and not other solution?</b><br/>
-At this moment Empire is a robust and mature framework for post-exploitation, the guys from BC-Security really did a good job after they forked the official unsupported project. I personally, when it comes to chose a platform, i prefer a solution that can be easily used by my team mates/ eventually colaborate all together on it through an API/ web interface. Empire has both API and web interface for multiple user colaboration.<br/>
+At this moment Empire is a robust and mature framework for post-exploitation, the guys from <a href="https://www.bc-security.org/post/the-empire-3-0-strikes-back"_blank" rel="noopener noreferrer">BC-Security </a> really did a good job after they forked the official unsupported project. I personally, when it comes to chose a platform, i prefer a solution that can be easily used by my team mates/ eventually colaborate all together on it through an API/ web interface. Empire has both API and web interface for multiple user colaboration.<br/>
 Few pros why i have chosen Empire and you should go for it too, in case you are the clasic guy who works with classic tools:
 <ul>
 <li>Encrypted C2 channels and multiple protocols/services supported for communications.</li>
@@ -163,3 +163,5 @@ Also a good tip, is to break large section of code into smaller pieces and test 
 A script will come in play in our aid when it comes obfuscation, so lets Invoke-Obfuscation!
 
 ## Invoke-Obfuscation {#invokeobfuscation}
+If you have not already viewed Daniel Bohannon's presentations about <a href="https://github.com/danielbohannon/Invoke-Obfuscation" target="_blank" rel="noopener noreferrer">Invoke-Obfuscation </a>, I invite you to take a look at the following <a href="https://www.youtube.com/watch?v=uE8IAxM_BhE" target="_blank" rel="noopener noreferrer">presentation1 </a> or <a href="https://www.youtube.com/watch?v=k5ToL0J7uL0" target="_blank" rel="noopener noreferrer">presentation2 </a>.
+
