@@ -174,3 +174,24 @@ $ErrorActionPreference = "SilentlyContinue";$ebDd=NEW-ObjecT SySteM.NET.WeBCLiEn
 {% endhighlight %}
 
 Without entering in to many details about it, lets see a little about its obfuscation techniques:
+
+<b>1.Token obfuscation</b><br/>
+The most used obfuscation method in our days is based on token, in special Empire is coming with Token/ALL obfuscation as default. If you chose to go for the Token/ALL, it will do a long set of changes like variable insertation, concatenation, comments removing, variable renaming, inserting random whitespace, etc. It is extremly useful for masking variable names to AMSI.
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/token.png">
+ </center>
+</div>
+However beucase it was extremely used in the last years, this will get you caught.
+It is recommended to run whitespace last (at least 2-3 times).
+
+<br/> <b>2.Abstract Syntax Tree (AST)</b><br/>
+An <a href="https://cobbr.io/AbstractSyntaxTree-Based-PowerShell-Obfuscation.html"_blank" rel="noopener noreferrer">AbstractSyntaxTree (“AST”) </a> is a commonly used structure to represent and parse source code in both compiled and interepreted languages. PowerShell is unique in that it exposes the AST structure in a way that is friendly to developers and is documented <a href="https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.language?view=pscore-6.2.0"_blank" rel="noopener noreferrer">extensively </a>. 
+  
+AST at base can easily find language elements. It is breaking the structure of the code and it is linking structures of code; AMSI will look at each structure of code in part and the token obfuscation will not help us to bypass it because they will be reduced at the basic form. AST contains all parsed content in Powershell code without having to dive into text parsing (we want to hide from this).
+
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/ast.png">
+ </center>
+</div>
+
+The AST obfuscation method will change the structure of AST.
