@@ -16,6 +16,7 @@ In the series that I will approach, I will present ways to compete with the top 
 * [What is AMSI?](#whatisamsi)
 * [How do I make use of opensource](#howdoimakeuseofopensource)
 * [Code Obfuscation](#codeobfuscation)
+* [Invoke Obfuscation](#invokeobfuscation)
 
 ## Short Introduction {#shortintro}
 Because it is less probable to encounter a Linux based system with a security solution in an enterprise environment, I have chosen to focus on how we can compromise a Windows based system up to date (11.04.2020 - the date I am writing this article) having all of the security modules enabled.
@@ -155,4 +156,10 @@ Powershell allows for the use of {} inside a string to allow for variable insert
 </div>
 
 
-<b>5.XOR</b><br/>
+<br/> The list of obfuscation methods can continue from compressing the code to encrypting it, etc.<br/>
+Also a good tip, is to break large section of code into smaller pieces and test them in part in order to determine what is being flagged in your stager.
+<br/> However I promised that we will make use of multiple open source tools for achieving our goal and not losing to much time on development.
+
+A script will come in play in our aid when it comes obfuscation, so lets Invoke-Obfuscation!
+
+## Invoke-Obfuscation {#invokeobfuscation}
