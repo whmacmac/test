@@ -1,5 +1,5 @@
 ---
-title: RedTeam Exercises with OpenSource Tools Part 1
+title: RedTeam Exercises with OpenSource Tools
 author: WHmacmac
 layout: post
 permalink: RedTeam_Exercises_with_OpenSource_Tools_Part_1
