@@ -97,7 +97,7 @@ As a penetration tester, I have to prioriteze what I want to complete first for 
 So this being said, i have chosen to go on the BC SECURITY's solution, the reborn Empire (epic music should be played on at this phrase).
 
 <b>Why Empire and not other solution?</b><br/>
-At this moment Empire is a robust and mature framework for post-exploitation, the guys from <a href="https://www.bc-security.org/post/the-empire-3-0-strikes-back"_blank" rel="noopener noreferrer">BC-Security </a> really did a good job after they forked the official unsupported project. I personally, when it comes to chose a platform, i prefer a solution that can be easily used by my team mates/ eventually colaborate all together on it through an API/ web interface. Empire has both API and web interface for multiple user colaboration.<br/>
+At this moment Empire is a robust and mature framework for post-exploitation, the guys from <a href="https://www.bc-security.org/post/the-empire-3-0-strikes-back" target="_blank" rel="noopener noreferrer">BC-Security </a> really did a good job after they forked the official unsupported project. I personally, when it comes to chose a platform, i prefer a solution that can be easily used by my team mates/ eventually colaborate all together on it through an API/ web interface. Empire has both API and web interface for multiple user colaboration.<br/>
 Few pros why i have chosen Empire and you should go for it too, in case you are the clasic guy who works with classic tools:
 <ul>
 <li>Encrypted C2 channels and multiple protocols/services supported for communications.</li>
