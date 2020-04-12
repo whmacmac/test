@@ -1,8 +1,8 @@
 ---
-title: RedTeam Exercises with OpenSource Tools
+title: RedTeam Exercises with OpenSource Tools Part 1
 author: WHmacmac
 layout: post
-permalink: RedTeam_Exercises_with_OpenSource_Tools
+permalink: RedTeam_Exercises_with_OpenSource_Tools_Part_1
 category: blog
 ---
 
