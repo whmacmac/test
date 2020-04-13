@@ -13,6 +13,13 @@ Who am I? My name is Bondrila Gabriel (also known to some as WHmacmac).
 - <a href="https://www.hackthebox.eu/profile/91248" target="_blank" rel="noopener noreferrer">HackTheBox CTF player </a>
 
 (Under Construction)
+<br/><br/><br/>
+Things I expect to write about:</br>
+- RedElk for red vs blue team engagements</br>
+- Exotic C2 communications (over slack,Dns over Https/DOH,onedrive)<br/>
+- Colaborations Platforms for Redteamers: StarKiller, Covenant.<br/>
+- Web Cache Poisoning: detection, attack and prevention.<br/>
+- Active Directory Attacks and Defenses.<br/>
 
 ### Contact me
 
