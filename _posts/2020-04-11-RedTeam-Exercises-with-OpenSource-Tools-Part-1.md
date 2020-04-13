@@ -88,7 +88,7 @@ This looks bad until now but courage, there is hope :).
 ## How do I make use of open source? {#howdoimakeuseofopensource}
 As a penetration tester, I have to prioritize what I want to complete first for having a prepared arsenal for any penetration test. Because time is precious to every one of us, we have to move fast: 
 <ol>
-<li>Get a working base code first from Empire, Metasploit, etc., would be ideally instead of reinventing the whell (reinventing the whell is a good thing if you are a malware developer - but this is a story for other article :) ).</li>
+<li>Get a working base code first from Empire, Metasploit, etc., would be ideally instead of reinventing the wheel (reinventing the wheel is a good thing if you are a malware developer - but this is a story for other article :) ).</li>
 <li>Customize functions - change default parameters/functions names, delete comments, write the functionality in other way, etc.</li>  
 <li>Obfuscate code.</li>  
 <li>Test against AV - Make sure you disable the option for permitting to Microsoft to upload your sample in their cloud sandbox. This will just waste your precious payload.</li>  
@@ -302,3 +302,4 @@ https://docs.microsoft.com/en-us/windows/win32/api/amsi/<br/>
 https://threatvector.cylance.com/en_us/home/how-to-implement-anti-malware-scanning-interface-provider.html<br/>
 https://blog.rapid7.com/2018/05/03/hiding-metasploit-shellcode-to-evade-windows-defender/<br/>
 https://www.cyberark.com/threat-research-blog/amsi-bypass-patching-technique/<br/>
+https://www.youtube.com/watch?v=F_BvtXzH4a4
