@@ -14,8 +14,8 @@ Who am I? My name is Bondrila Gabriel (also known to some as WHmacmac).
 
 (Under Construction)
 <br/><br/><br/>
-Things I expect to write about:</br>
-- RedElk for red vs blue team engagements</br>
+Things I expect to write about:
+- RedElk for red vs blue team engagements
 - Exotic C2 communications (over slack,Dns over Https/DOH,onedrive)<br/>
 - Colaborations Platforms for Redteamers: StarKiller, Covenant.<br/>
 - Web Cache Poisoning: detection, attack and prevention.<br/>
