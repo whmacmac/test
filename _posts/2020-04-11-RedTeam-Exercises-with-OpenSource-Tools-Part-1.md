@@ -7,7 +7,7 @@ category: blog
 ---
 
 Can RedTeam exercises be done today by only using open source tools?<br/> 
-Do they have 100% yield or success?<br\>
+Do they have 100% yield or success?<br/>
 Can I compete with the top solutions in a RedTeam vs BlueTeam engagement, BlackBox or WhiteBox exercise, using only open source tools and having the same result as the enterprise solutions like: Canvas, Metasploit Pro, Open Core, Cobaltstrike?
 
 In the next articles, I will approach proper ways to compete with the top security researchers from the companies focused on security products, and how to combine or customize multiple open source solutions for achieving the same result. 
