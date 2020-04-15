@@ -35,11 +35,11 @@ We can see a number of measures implemented in Microsoft's operating system that
   <li>Simulated Execution (SimExec)</li>
   <li>Valid stack integrity (StackPivot)</li>
 </ul>          
-I will not advertise Microsoft products but as I focus on proving that we can still bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they haven't started already). One security solution from Microsoft I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why. I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what i am speaking of :).
+I will not advertise Microsoft products but as I focus on proving that we can still bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they haven't started already). There is one security solution from Microsoft that I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why. I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what I am speaking of :).
                     
 
 ## What is AMSI? {#whatisamsi}
-As you guessed, I was reffering at AMSI; before starting how to make use of the open source tools for a red team exercise, we have to bypass Microsoft's security modules, this meaning we have to bypass AMSI too. 
+As you guessed, I was referring at AMSI; before starting how to make use of the open source tools for a RedTeam exercise, we have to bypass Microsoft's security modules, this meaning we have to bypass AMSI too. 
 Before getting into the methods of bypassing AMSI, we need to clarify a little about what AMSI is, under what principles AMSI works and how it has the ability to catch even the most exotic payloads.
 
 <div>
