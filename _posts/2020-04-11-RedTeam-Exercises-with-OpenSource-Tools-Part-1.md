@@ -6,9 +6,11 @@ permalink: RedTeam_Exercises_with_OpenSource_Tools_Part_1
 category: blog
 ---
 
-Can RedTeam exercises be done today only using open source tools and do they have 100% yield/success? Can I affirm that I can compete with the top solutions in a red team vs blue team engagement, blackbox or whitebox exercise, using only open source tools and having the same result as the enterprise solutions like: Canvas, Metasploit Pro, Open Core, Cobaltstrike ?
+Can RedTeam exercises be done today by only using open source tools?<br/> 
+Do they have 100% yield or success?<br\>
+Can I compete with the top solutions in a RedTeam vs BlueTeam engagement, BlackBox or WhiteBox exercise, using only open source tools and having the same result as the enterprise solutions like: Canvas, Metasploit Pro, Open Core, Cobaltstrike?
 
-In the series that I will approach, I will present ways to compete with the top security research undertaken by companies focused on security products and how we can combine and customize multiple open source solutions for achieving the same result. 
+In the next articles, I will approach proper ways to compete with the top security researchers from the companies focused on security products, and how to combine or customize multiple open source solutions for achieving the same result. 
 
 
 ## Contents
@@ -18,8 +20,8 @@ In the series that I will approach, I will present ways to compete with the top 
 * [Code Obfuscation](#codeobfuscation)
 * [Invoke Obfuscation](#invokeobfuscation)
 
-## Short Introduction {#shortintro}
-Because it is less probable to encounter a Linux based system with a security solution in an enterprise environment, I have chosen to focus on how we can compromise a Windows based system up to date (11.04.2020 - the date I am writing this article) having all of the security modules enabled.
+## Introduction {#shortintro}
+I have chosen to focus on how we can compromise a Windows based system up to date (11.04.2020 - the date I am writing this article) having all of the security modules enabled, mostly because it is less probable to encounter a Linux based system with a security solution in an enterprise environment.
 
 We can see a number of measures implemented in Microsoft's operating system that have no role other than to provide a greater protection system for user protection:
 <ul>
