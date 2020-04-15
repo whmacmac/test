@@ -35,7 +35,7 @@ We can see a number of measures implemented in Microsoft's operating system that
   <li>Simulated Execution (SimExec)</li>
   <li>Valid stack integrity (StackPivot)</li>
 </ul>          
-I will not advertise Microsoft products but as I focus on proving that we can still bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they haven't started already). There is one security solution from Microsoft that I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why. I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what I am speaking of :).
+I will not advertise Microsoft products but as I focus on proving that we can still bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they haven't started already). There is one security solution from Microsoft that I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why. I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you what I am talking about :).
                     
 
 ## What is AMSI? {#whatisamsi}
