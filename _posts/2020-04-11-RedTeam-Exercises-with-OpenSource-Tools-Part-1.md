@@ -21,9 +21,9 @@ In the next articles, I will approach proper ways to compete with the top securi
 * [Invoke Obfuscation](#invokeobfuscation)
 
 ## Introduction {#shortintro}
-I have chosen to focus on how we can compromise a Windows based system up to date (11.04.2020 - the date I am writing this article) having all of the security modules enabled, mostly because it is less probable to encounter a Linux based system with a security solution in an enterprise environment.
+I have chosen to focus on how we can compromise a Windows based system up to date (11.04.2020 - the date I am writing this article) having all the security modules enabled, mostly because it is less probable to encounter a Linux based system with a security solution in an enterprise environment.
 
-We can see a number of measures implemented in Microsoft's operating system that have no role other than to provide a greater protection system for user protection:
+We can see a number of measures implemented in Microsoft's operating system that have no role other than to provide a greater protection system for user's experience:
 <ul>
   <li>Windows Defender</li>
   <li>Antimalware Scan Interface (AMSI)</li>
@@ -35,7 +35,7 @@ We can see a number of measures implemented in Microsoft's operating system that
   <li>Simulated Execution (SimExec)</li>
   <li>Valid stack integrity (StackPivot)</li>
 </ul>          
-I do not want to advertise Microsoft products but as I focus on proving we still can bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they already have not started). One security sollution from Microsoft I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why, I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what i am speaking of :).
+I will not advertise Microsoft products but as I focus on proving that we can still bypass their solutions, I can not say that they didn't do a good job regarding thier security solutions (maybe they are intending to sell security services like many others if they haven't started already). One security solution from Microsoft I encountered more than I intended to, and I burned my arsenal in development or pentests before finding out what stopped me and why. I am pretty sure you encountered it too even if Windows Defender was not the main AV/AntiMalware solution from your target. I think you got about what i am speaking of :).
                     
 
 ## What is AMSI? {#whatisamsi}
