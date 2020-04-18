@@ -39,17 +39,17 @@ I will not advertise Microsoft products but as I focus on proving that we can st
                     
 
 ## What is AMSI? {#whatisamsi}
-As you guessed, I was referring at AMSI; before starting how to make use of the open source tools for a RedTeam exercise, we have to bypass Microsoft's security modules, this meaning we have to bypass AMSI too. 
-Before getting into the methods of bypassing AMSI, we need to clarify a little about what AMSI is, under what principles AMSI works and how it has the ability to catch even the most exotic payloads.
+As you guessed, I was referring to AMSI; before focusing on how to make use of the open source tools for a RedTeam exercise, we have to bypass Microsoft's security modules, this meaning we have to bypass AMSI too. 
+Before reviewing the methods of bypassing AMSI, we need to clarify a little about what AMSI is, under what principles AMSI works and how it has the ability to catch even the most exotic payloads.
 
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools/amsi.png">
  </center>
 </div>
 
-AMSI is an interface that allows to the OS's applications and services to integrate with any antimalware product that's present on a machine. It supports a calling structure allowing for a file and memoy or stream scanning, content source URL/IP reputation checks and other techniques. It supports also the notion of a session so different antimalware vendors can correlate different scan requests, this being pretty bad for our stagers if they are catched by AMSI.
+AMSI is an interface that allows to the OS's applications and services to integrate with any antimalware product that's present on a machine. It supports a calling structure allowing for a file and memoy or stream scanning, content source URL/IP reputation checks and other techniques. It also supports the notion of a session so different antimalware vendors can correlate different scan requests, this being pretty bad for our stagers if they are catched by AMSI.
   
-As we can see in the above image, AMSI is integrated by default in the following Windows' components meaning that for example we have a powershell script containing some commands, they will be analyzed based on some string patterns and in case they something match, then Windows Defender/ Microsoft's Sandbox will enter in action:
+As we can see in the above image, AMSI is integrated by default in the Windows' components meaning that, for example, we have a powershell script containing some commands; those commands will be analyzed based on some string patterns and in case they  match, then Windows Defender/ Microsoft's Sandbox will start as follows:
 
 <ul>
   <li>User Account Control, or UAC (elevation of EXE, COM, MSI, or ActiveX installation)</li>
@@ -290,7 +290,7 @@ set ObfuscateCommand Token\String\1,1,2, Token\Variable\1, Token\Whitespace\1,1,
 
 {% endhighlight %}
 
-<br/> In the next article, we will see how to apply all what we discussed to bypass Windows Defender, AMSI and get a reverse shell. We will approach few scenaries in what will follow.<br/>
+<br/> In the next article, we will see how to apply all what we discussed to bypass Windows Defender, AMSI and get a reverse shell. We will approach few scenarios in what will follow.<br/>
 Please let me know your feedback about it :).<br/><br/><br/>
 
 References:<br/>
