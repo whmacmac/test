@@ -7,7 +7,7 @@ category: blog
 ---
 
 Hello again :).<br/> 
-It took me more than I anticipated to write the second part. The guys from BC-Security announced on April 4th 2020 that they have made Empire's stager undetectable. Microsoft did not wait to see Empire being used in the wild and updated the Windows Defender with new signatures against our beloved Empire's stagers. As per below, I will show you how to apply what you've learnt from the first <a href="https://whmacmac.github.io/RedTeam_Exercises_with_OpenSource_Tools_Part_1" style="text-decoration: none;">part</a> of my article.
+It took me longer than I anticipated to write the second part. The guys from BC-Security announced on April 4th 2020 that they have made Empire's stager undetectable. Microsoft did not wait to see Empire being used in the wild and updated the Windows Defender with new signatures against our beloved Empire's stagers. As per below, I will show you how to apply what you've learnt from the first <a href="https://whmacmac.github.io/RedTeam_Exercises_with_OpenSource_Tools_Part_1" style="text-decoration: none;">part</a> of my article.
 
 ## Contents
 * [Intro scenarios](#shortintro)
