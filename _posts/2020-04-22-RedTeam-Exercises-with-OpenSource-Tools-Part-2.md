@@ -37,7 +37,7 @@ Lets speak a bit about how our phishing mail from the 2nd scenario will look, ho
 
 All of the mentioned phases are finding in the below scheme. 
 <div>
-<center><img src="/images/2020-04-16-RedTeam-Exercises-with-OpenSource-Tools-Part-2.md/arhitecturef.png">
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/arhitecturef.png">
  </center>
 </div>
 
@@ -57,7 +57,7 @@ In my tests, I observed that the following patterns are flagged:<br/>
 <b>1. SafeChecks:</b><br/>
 The stager is coming with SafeChecks enabled by default. Taking a look at what is doing SafeChecks, I observed it is checking if the powershell verison is great or equal with 3. This can be used as a part of a more complex rule for detecting the Empire. I recommend to disable it.
 <div>
-<center><img src="/images/2020-04-16-RedTeam-Exercises-with-OpenSource-Tools-Part-2.md/powershellversion.png">
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/powershellversion.png">
  </center>
 </div>
 
@@ -65,7 +65,7 @@ The stager is coming with SafeChecks enabled by default. Taking a look at what i
 BC-Security announced on <a href="https://twitter.com/BCSecurity1/status/1247165928757800965" style="text-decoration: none;">6 April 2020</a> that they updated their HTTP listener to evade Windows Defender again. I was curious and took a look on their <a href="https://github.com/BC-SECURITY/Empire/pull/148/commits/3bc0eb6e435f39981092ed823da623e22146d2bc" style="text-decoration: none;">commit</a> on their Github repo to see what changes they did.
 
 <div>
-<center><img src="/images/2020-04-16-RedTeam-Exercises-with-OpenSource-Tools-Part-2.md/httpevader.png">
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/httpevader.png">
  </center>
 </div>
  
@@ -102,7 +102,7 @@ It is well known that some powershell arguments were abused in the last years ..
 The Empire's stager (multi/launcher) is coming with the 'encodedcommand' command as enabled by default. Besides this, the empire's listeners (HTTP listener) is using all of the above arguments as part of the launcher syntax. When they are used together, most likely there is something suspicious. Use only 'noninteractive' or '-windowsstyle hidden' if it is needed.
 
 <div>
-<center><img src="/images/2020-04-16-RedTeam-Exercises-with-OpenSource-Tools-Part-2.md/launcher.png">
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/launcher.png">
  </center>
 </div>
 
@@ -119,7 +119,7 @@ I am using the only in memory downloader. I invite you to take a look on it in c
 <br/> I can also obfuscate more the dropper with Invoke-Obfuscation, for escaping the most exotic SIEM/HIDS rules but I am not doing it this time. 
 
 <div>
-<center><img src="/images/2020-04-16-RedTeam-Exercises-with-OpenSource-Tools-Part-2.md/cradle.png">
+<center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/cradle.png">
  </center>
 </div>
 
