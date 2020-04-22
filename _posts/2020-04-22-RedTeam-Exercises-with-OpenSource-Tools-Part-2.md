@@ -55,7 +55,7 @@ Even if Empire framework is coming with a lot of obfuscation methods or evasion 
 In my tests, I observed that the following patterns are flagged:<br/>
 
 <b>1. SafeChecks:</b><br/>
-The stager is coming with SafeChecks enabled by default. Taking a look at what is doing SafeChecks, I observed it is checking if the powershell verison is great or equal with 3. This can be used as a part of a more complex rule for detecting the Empire. I recommend to disable it.
+The stager is coming with SafeChecks enabled by default. Taking a look at what SafeChecks is doing, we can notice that the powershell's verison is greater or equal with 3. This can be used as a part of a more complex rule for detecting the Empire. I recommend to disable it.
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/powershellversion.png">
  </center>
