@@ -55,26 +55,26 @@ Even if Empire framework is coming with a lot of obfuscation methods or evasion 
 In my tests, I observed that the following patterns are flagged:<br/>
 
 <b>1. SafeChecks:</b><br/>
-The stager is coming with SafeChecks enabled by default. Taking a look at what SafeChecks is doing, we can notice that the powershell's verison is greater or equal with 3. This can be used as a part of a more complex rule for detecting the Empire. I recommend to disable it.
+The stager is coming with SafeChecks enabled by default. Taking a look at what SafeChecks is doing, we can notice that the powershell's verison is greater or equal with 3. This can be used as a part of a complex rule for detecting the Empire. I do  recommend to disable it.
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/powershellversion.png">
  </center>
 </div>
 
 <b>2. Rules based on the order of the code's postion:</b><br/>
-BC-Security announced on <a href="https://twitter.com/BCSecurity1/status/1247165928757800965" style="text-decoration: none;">6 April 2020</a> that they updated their HTTP listener to evade Windows Defender again. I was curious and took a look on their <a href="https://github.com/BC-SECURITY/Empire/pull/148/commits/3bc0eb6e435f39981092ed823da623e22146d2bc" style="text-decoration: none;">commit</a> on their Github repo to see what changes they did.
+BC-Security announced on <a href="https://twitter.com/BCSecurity1/status/1247165928757800965" style="text-decoration: none;"> April 6th 2020</a> that they updated their HTTP listener to evade Windows Defender again. I was curious and took a look on their <a href="https://github.com/BC-SECURITY/Empire/pull/148/commits/3bc0eb6e435f39981092ed823da623e22146d2bc" style="text-decoration: none;">commit</a> on their Github repository to see what changes they did.
 
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/httpevader.png">
  </center>
 </div>
  
- As I suspected, the order of functions is a really big way that AMSI is fingerprinting now. So to bypass AMSI, we just have to reorder those commands who are idependent.<br/> 
+ As I suspected, the order of functions is a really big way how AMSI is fingerprinting now. So to bypass AMSI, we just have to reorder those commands that are idependent.<br/> 
  You can move a number of independent position commands to break the Microsoft's signatures.
 
 <b>3. Default Obfuscation:</b><br/>
-Empire is using as default the "Token\All\1" obfuscation. I observed in my tests that any of the \all options in Invoke-Obfuscation is likely to get caught. Try using a custom combination of the sub options.<br/>
-In my tests I used the following list: again you can use any custom combination you prefer, just do not break the limit of 8191 characters that Powershell interpreter is accepting. 
+Empire is using as default the "Token\All\1" obfuscation. I observed in my tests that any of the \all options in Invoke-Obfuscation are likely to get caught. Try using a custom combination of the sub options.<br/>
+In my tests I used the following list: again you can use any custom combination you prefer, just don't break the limit of 8191 characters that Powershell interpreter is accepting. 
 {% highlight powershell %}
 set ObfuscateCommand Token\String\1,1,2,1, Encoding\2, Compress\1
 set ObfuscateCommand Token\String\1,1,2,1, Token\Variable\1, Encoding\2, Compress\1
@@ -86,10 +86,10 @@ set ObfuscateCommand AST\SCRIPTBLOCKAST\1, Encoding\1
 
 {% endhighlight %}
 
-Microsoft anticipated only a limited number of custom combination using Invoke-Obfuscation. Take your time and do more complex custom combinations keeping in mind to not break the limit.
+Microsoft anticipated only a limited number of custom combination using Invoke-Obfuscation. Take your time and do more complex custom combinations keeping in mind to don't break the limit.
 
 <b>4. Suspicious key words</b><br/>
-It is well known that some powershell arguments were abused in the last years ... If you are working as a blue teamer, I am pretty sure you know which are these "widely used" arguments in attacks:
+It is well known that some powershell arguments were abused in the last years. If you are working as a blue teamer, I am pretty sure you know which are these "widely used" arguments in attacks:
 
 <ul>
  <li>NoProfile – indicates that the current user’s profile setup script should not be executed when the PowerShell engine starts.</li>
