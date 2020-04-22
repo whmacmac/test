@@ -23,7 +23,7 @@ I finished the first part promising that I will apply the theory on some real wo
 </ul>
 
 I considered that we all encountered situations where we were limited by a dumb shell. We could not upgrade it if we do not take all the necessary measures against a security solution. I found myself in the situation where I could access the target's network only through a phishing email.<br/>
-I wanted to develop a simple malware that it uses the multi stager feature of the Empire framework. I want from start that all what I will present, fits on the real world scenarios. <b>Also all what i show you is just in education purposes. Do not apply outside of your network.</b><br/>
+I wanted to develop a simple malware that it uses the multi stager feature of the Empire framework. What I want to do is a malware that will fit in the real world scenarios. <b>Also all what I show you is for education purposes only. Do not apply it outside of your network.</b><br/>
 Lets talk a bit about how our phishing mail from the 2nd scenario will look, how I was thinking its arhitecture, what difficulties I am expecting to encounter during its delivery or execution. 
 
 <ul>
