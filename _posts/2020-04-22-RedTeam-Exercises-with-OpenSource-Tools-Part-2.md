@@ -47,9 +47,9 @@ I divided my testing work in half in order to bypass Windows Defender and AMSI r
 
 ## Scenario 1 {#scenario1}
 I will not show all the tests that I did in order to observe and analyze the Windwos Defender's behavior and the AMSI rules. In my examples, I am using multi/launcher stager.<br/>
-In the first scenario I consider I already obtained somehow access in the network via a service exploit, web application vulnerability or through a phishing email.<br/>
+In the first scenario, I consider that I already have obtained access in the network via a service exploit, web application vulnerability or through a phishing email.<br/>
 
-As I said in the first part, if you are using Empire with default config, it will be catched by Windows Defender. It can not pass the system protections so obfuscation or changes are needed.
+As I said in the first part, if you are using Empire with default configuration, it will be caught by Windows Defender. It can not pass the system protections, so you need to make some changes or to obfuscate it.
 Even if Empire framework is coming with a lot of obfuscation methods or evasion capabilities, Microsoft created a set of signatures based on Empire's stagers behavior, strings, stager's code, and so on. 
 
 In my tests, I observed that the following patterns are flagged:<br/>
