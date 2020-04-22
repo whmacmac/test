@@ -28,22 +28,22 @@ Lets talk a bit about how our phishing mail from the 2nd scenario will look, how
 
 <ul>
 <li>Phase 1 and 2: They are referring to successfully deliver the email in the user's inbox. Depending on the type of infrastructure I am targeting, I expect to encounter a mail protection with the ability to detect and eventualy detonate my attachment in a sandbox. We have to take the proper measures to avoid being detected by the security gateway. In case we are detected, then we should make sure to instruct the payload to don't start the execution process in the analysis machine. If I am flagged by a security protection, I will have to remake the payload.</li> 
-<li>Phase 3: It implies our social engineering skills. I have to make the user to enable the macro or execute it through a tricky mechanism (example: macro in excel fields). Since Microsoft Office is the most used email client, I will focus only on its security protections. Microsoft has developed a sandbox mode which is a security feature that prevents access from running certain expressions that could be unsafe.</li>
-<li>Phase 4: If I made the user to enable the macros or to do whatever method I thought to execute it in background, my script will check if it is running in a sandbox and in case it does, then it will stop the execution. The VBs script beside the sandbox checkings, it contains the code for loading the dropper in memory. As a process tree, it will look like the following: "Office" process -> VBs interpreter -> Powershell.</li>
-<li>Phase 5: The dropper will contact a decoy server for downloading the first stager in memory. I have chosen to make use of a decoy server in my malware arhitecture for covering up the posibility to have blocked my primary C2 by a SOC team.</li>  
-<li>Phase 6: My decoy server will send the first stager to the victim, it being loaded directly in memory..</li>  
-<li>Phase 7,8,9,10: The stager 7 is the launcher, the part that I had to obfuscate it. If it is successfully run, it will reach the Empire server, the C2 server will respond with the "stage 1" that does all of my key negotiation and finally it loads the Empire agent that enables all of my command and control functionalities. If you prefer, you can take a look at the scheme of how Empire agents are working <a href="https://testmactest.github.io/RedTeam_Exercises_with_OpenSource_Tools_Part_1#howdoimakeuseofopensource" style="text-decoration: none;">here</a></li>
+<li>Phase 3: It implies our social engineering skills. I have to make the user to enable the macro or to execute it through a tricky mechanism (example: macro in excel fields). Since Microsoft Office is the most used email client, I will focus only on its security protections. Microsoft has developed a sandbox mode which is a security feature that prevents access from running certain expressions that could be unsafe.</li>
+<li>Phase 4: If I made the user to enable the macros or to do whatever method I thought for executing it in the background, my script will check if it is running in a sandbox. If it does, then it will stop the execution process. The VBs script, beside the sandbox checkings, contains the code for loading the dropper in memory. As a process tree, it will look like the following: "Office" process -> VBs interpreter -> Powershell.</li>
+<li>Phase 5: The dropper will contact a decoy server for downloading the first stager in memory. I have chosen to use a decoy server in my malware arhitecture for covering up the posibility to have blocked my primary C2 by a SOC team.</li>  
+<li>Phase 6: My decoy server will send the first stager to the victim. The stager is loaded directly in the memory..</li>  
+<li>Phase 7,8,9,10: The payload from phase 7 is the launcher, that code part that has to be obfuscated. If it runs successfully, it will reach the Empire server. The C2 server will respond with the "stager 1" that makes all of the keys negotiation. Finally, it loads the Empire agent that enables all of my command and control functionalities. If you prefer, you can take a look at the scheme of how Empire agents are working <a href="https://testmactest.github.io/RedTeam_Exercises_with_OpenSource_Tools_Part_1#howdoimakeuseofopensource" style="text-decoration: none;">here</a></li>
 </ul>
 
-All of the mentioned phases are finding in the below scheme. 
+All of the mentioned phases are found in the below scheme. 
 <div>
 <center><img src="/images/2020-04-11-RedTeam-Exercises-with-OpenSource-Tools-Part-1.md/arhitecturef.png">
  </center>
 </div>
 
-If you are wondering where is the scheme for the first scenario, I am answering you that it is using the same code as the second scenario, starting from 5th phase. This first scenario is a pre-requisite for having an operational phishing email.
+The first scenario uses the same steps from the second scenario, starting from 5th phase. This first scenario is necessary for having an operational phishing email.
 
-I divided my testing work in half in order to bypass Windows Defender and AMSI rules: one for testing the stager's evasion capabilities for not being detected. The second part is focused testing and developing anti-sandbox features and a way to bypass the Office's sandbox mode. 
+I divided my testing work in half in order to bypass Windows Defender and AMSI rules: one part for testing the stager's evasion capabilities. And the second part is focused on testing and developing anti-sandbox features and a way to bypass the Office's sandbox mode. 
 
 ## Scenario 1 {#scenario1}
 I will not show all the tests that I did in order to observe and analyze the Windwos Defender's behavior and the AMSI rules. In my examples, I am using multi/launcher stager.<br/>
