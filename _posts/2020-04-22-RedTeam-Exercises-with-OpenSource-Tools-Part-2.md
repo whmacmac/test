@@ -173,7 +173,7 @@ Some processes to look for: Vmtools, VBoxService, Sbiesvc, SbieCtrl
 However I can not guarantee that all of the mentioned tips will work. Try to learn as much as possible about your target. Check attack.mitre.org to look for new techqniques if the old ones fail. Use multiple conditions.
 
 
-
+Please check again in few days, the article is not finished.
 
 
 
