@@ -174,7 +174,8 @@ However I can not guarantee that all of the mentioned tips will work. Try to lea
 
 
 Please check again in few days, the article is not finished.
-
+Note - April 25th 2020 - WindowsDefender is capable of detecting my Empire stager from phases 8,9,10. Even if it is allowing me to execute in background, it is requesting if I want to submit some streams in their Cloud Sandbox for further analysis. Empire Framework has an option for allowing connections only from stagers running under a specific username or from a specific IP address. This is supposing to block Microsoft Sandbox's analysis.
+<br/> As a conclusion, I have to rewritten or to reorder the position of those independent lines of codes in the listener/stager in order to break Microsoft's signatures. Scenario 2 is still working without being detected at this moment but you have to come with a new combination of invoke-obfuscation.
 
 
 
