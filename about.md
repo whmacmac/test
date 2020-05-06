@@ -6,7 +6,7 @@ permalink: /about
 
 Who am I? My name is Bondrila Gabriel (also known to some as WHmacmac).<br/> Causes that I care about:
 <ul>
-<li><a href="https://asociatiamagic.ro/taberele-de-vara-magicamp/" target="_blank" rel="noopener noreferrer">MAGICamp </a> camps for children with disabilities.</li>
+<li><a href="https://asociatiamagic.ro/taberele-de-vara-magicamp/" target="_blank" rel="noopener noreferrer">MAGICamp </a>  for children with disabilities.</li>
 <li><a href="https://www.greenpeace.org/romania" target="_blank" rel="noopener noreferrer">Greenpeace </a></li>
 <li>Fara <a href="https://www.farapenaliinfunctiipublice.ro" target="_blank" rel="noopener noreferrer"> penali </a> in functii publice</li>
 </ul>
