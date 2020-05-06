@@ -1,5 +1,5 @@
 ---
-title: Code Review Detect SQLi in Java
+title: Code Review: Detect SQLi in Java
 author: WHmacmac
 layout: post
 permalink: Code_Review_Detect-SQLi_in_Java
