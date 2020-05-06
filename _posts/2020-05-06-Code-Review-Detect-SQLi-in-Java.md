@@ -177,3 +177,7 @@ statement.setString(2, FirstName);
 ResultSet result = statement.executeQuery();
 
 {% endhighlight %}
+
+
+## Conclusion {#conclusion}
+ORMs spare us from creating hand-coded SQL statements, but they won't prevent from writing vulnerable code. A good tip for finding if your code is vulnerable to SQLi is to look at how the queries are written or built. Try to understand how the input is used in the background. If it is sanitized, try to understand how the programmers thought to sanitize it and check if you can take advantage over its sanitize functions in case they are custom made. 
