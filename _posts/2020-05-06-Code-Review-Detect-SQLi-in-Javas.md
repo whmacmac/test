@@ -14,7 +14,6 @@ Why do we need code review when we can interact with the target and finding if i
 * [Java Persistence API (JPA)](#jpa)
 * [Hibernate](#hibernate)
 * [PreparedStatement](#preparedstatement)
-* [CallableStatement](#callablestatement)
 * [Conclusion](#conlusion)
 
 ## Introduction {#introduction}
